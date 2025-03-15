@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Function File Test</title>
-</head>
-<body>
-    <h1>Outlook Add-in Loaded!</h1>
+    <title>Outlook Add-in</title>
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
     <script>
-        console.log("Outlook Add-in Script Loaded");
+        Office.onReady(function() {
+            console.log("Outlook Add-in is ready!");
+        });
+
+        function insertText() {
+            Office.context.mailbox.item.body.setAsync(
+                "Hello! This text was inserted by the Outlook add-in.",
+                { coercionType: "html" },
+                function(result) {
+                    if (result.status === Office.AsyncResultStatus.Failed) {
+                        console.error("Error inserting text: ", result.error.message);
+                    } else {
+                        console.log("Text inserted successfully.");
+                    }
+                }
+            );
+        }
     </script>
+</head>
+<body>
+    <h1>Outlook Add-in</h1>
+    <p>Click the button below to insert text into your email.</p>
+    <button onclick="insertText()">Insert Text</button>
 </body>
 </html>
