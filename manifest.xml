@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
-            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xsi:type="MailApp">
+  
   <Id>12345678-1234-1234-1234-123456789abc</Id>
   <Version>1.0</Version>
   <ProviderName>Your Company</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName>Outlook Plugin</DisplayName>
   <Description>Custom Outlook Plugin</Description>
-  <IconUrl>https://yourdomain.com/icon.png</IconUrl>
+  <IconUrl>https://ksr-foodrazzle.github.io/skills-github-pages/icon.png</IconUrl>
+
   <Capabilities>
     <Capability Name="MessageCompose"/>
   </Capabilities>
+
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>
+
   <Requirements>
     <Sets DefaultMinVersion="1.1">
       <Set Name="Mailbox"/>
     </Sets>
   </Requirements>
+
   <FormSettings>
     <Form xsi:type="ItemRead">
       <FunctionFile resid="FunctionFileUrl"/>
@@ -29,17 +34,18 @@
           <Menu id="msgReadMenu">
             <Button id="msgReadInsertText"
                     label="Insert Text"
-                    icon="https://yourdomain.com/icon.png"
-                    action="insertText"
-                    />
+                    icon="https://ksr-foodrazzle.github.io/skills-github-pages/icon.png"
+                    action="insertText"/>
           </Menu>
         </OfficeMenu>
       </ExtensionPoint>
     </Form>
   </FormSettings>
+
   <Resources>
     <bt:Urls>
       <bt:Url id="FunctionFileUrl">https://ksr-foodrazzle.github.io/skills-github-pages/function.html</bt:Url>
     </bt:Urls>
   </Resources>
+
 </OfficeApp>
