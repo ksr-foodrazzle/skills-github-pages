@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xsi:type="MailApp">
-  
+
   <Id>12345678-1234-1234-1234-123456789abc</Id>
   <Version>1.0</Version>
   <ProviderName>Your Company</ProviderName>
@@ -28,7 +27,7 @@
 
   <FormSettings>
     <Form xsi:type="ItemRead">
-      <FunctionFile resid="FunctionFileUrl"/>
+      <FunctionFile>https://ksr-foodrazzle.github.io/skills-github-pages/function.html</FunctionFile>
       <ExtensionPoint xsi:type="MessageReadCommandSurface">
         <OfficeMenu>
           <Menu id="msgReadMenu">
@@ -42,10 +41,5 @@
     </Form>
   </FormSettings>
 
-  <Resources>
-    <bt:Urls>
-      <bt:Url id="FunctionFileUrl">https://ksr-foodrazzle.github.io/skills-github-pages/function.html</bt:Url>
-    </bt:Urls>
-  </Resources>
-
 </OfficeApp>
+
